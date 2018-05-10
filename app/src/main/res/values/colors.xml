@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2b2b2b</color>
+    <color name="colorPrimaryDark">#2b2b2b</color>
+    <color name="colorAccent">#38b8f2</color>
+    <color name="colorNavHeader">#fff</color>
+    <color name="buttonColor">#fff</color>
+    <color name="background">#f5f5f5</color>
+    <color name="russianViolet">#CB8589</color>
+    <color name="headerText">#606060</color>
+</resources>
+
+<!-- default primary color #3F51B5-->
+
+<!-- default primary dark #303F9F -->
+
+<!-- default colorAccent #FF4081 -->

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="naviation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/drawer_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Strona główna" />
+
+        <item
+            android:id="@+id/drawer_restaurant_list"
+            android:icon="@drawable/ic_restaurant_black_24dp"
+            android:title="Restauracje" />
+
+        <item
+            android:id="@+id/drawer_login"
+            android:icon="@drawable/ic_account_box_black_24dp"
+            android:title="Logowanie" />
+
+        <item
+            android:id="@+id/drawer_register"
+            android:icon="@drawable/ic_person_add_black_24dp"
+            android:title="Rejestracja" />
+
+    </group>
+
+
+
+</menu>

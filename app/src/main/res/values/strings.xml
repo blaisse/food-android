@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Food</string>
+    <string name="restaurant_header">Restauracje</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="token">token</string>
+    <string name="nazwa">nazwa</string>
+    <string name="shoppingCart">shoppingCart</string>
+</resources>

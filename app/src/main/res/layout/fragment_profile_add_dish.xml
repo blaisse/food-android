@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="Dodaj danie"
+        android:textSize="20sp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/profile_add_dish_type_field"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="134dp"
+        android:completionThreshold="1"
+        android:hint="Rodzaj dania" />
+
+    <EditText
+        android:id="@+id/profile_add_dish_name_field"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="71dp"
+        android:ems="10"
+        android:hint="Nazwa"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/profile_add_dish_price_field"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="199dp"
+        android:ems="10"
+        android:hint="Cena"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/profile_add_dish_time_field"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="203dp"
+        android:ems="10"
+        android:hint="Czas"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/profile_add_dish_img_field"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="134dp"
+        android:ems="10"
+        android:hint="Zdjęcie (link)"
+        android:inputType="textPersonName"
+        android:text="https://www.imageupload.co.uk/images/2018/04/22/cake_size.jpg" />
+
+    <Button
+        android:id="@+id/profile_add_dish_button"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:background="@color/colorAccent"
+        android:textColor="@color/buttonColor"
+        android:text="Dodaj danie" />
+
+
+</RelativeLayout>

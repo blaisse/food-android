@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edit_dish_add_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:hint="Treść" />
+
+    <RelativeLayout
+        android:id="@+id/dialog_add_comment_layout"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+
+    <!--<TextView-->
+        <!--android:id="@+id/edit_dish_add_grade1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignTop="@+id/edit_dish_add_grade2"-->
+        <!--android:layout_marginStart="42dp"-->
+        <!--android:drawableStart="@drawable/ic_star_border_black_24dp"-->
+        <!--android:text="" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/edit_dish_add_grade2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="126dp"-->
+        <!--android:drawableStart="@drawable/ic_star_border_black_24dp"-->
+        <!--android:text="" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/edit_dish_add_grade3"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignTop="@+id/edit_dish_add_grade1"-->
+        <!--android:layout_marginEnd="47dp"-->
+        <!--android:drawableStart="@drawable/ic_star_border_black_24dp"-->
+        <!--android:text="" />-->
+
+</RelativeLayout>
