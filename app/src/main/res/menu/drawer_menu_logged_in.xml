@@ -30,6 +30,11 @@
             android:icon="@drawable/ic_exit_to_app_black_24dp"
             android:title="Wyloguj" />
 
+        <item
+            android:id="@+id/drawer_restaurant_fragment"
+            android:icon="@drawable/ic_person_add_black_24dp"
+            android:title="Restauracja TEST" />
+
     </group>
 
 </menu>

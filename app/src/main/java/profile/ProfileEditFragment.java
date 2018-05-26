@@ -45,6 +45,7 @@ public class ProfileEditFragment extends Fragment {
 
         final EditText name = view.findViewById(R.id.profile_edit_data_name);
         final EditText address = view.findViewById(R.id.profile_edit_data_address);
+        final EditText img = view.findViewById(R.id.profile_edit_data_img);
 
         Button submit = view.findViewById(R.id.profile_edit_data_button);
 
@@ -54,6 +55,14 @@ public class ProfileEditFragment extends Fragment {
         final String typeFromPreferences = sharedPref.getString("type", "");
         final String nazwaFromPreferences = sharedPref.getString(getString(R.string.nazwa), "");
         final String adresFromPreferences = sharedPref.getString("adres", "");
+
+        if(typeFromPreferences.equals("user")){
+            img.setVisibility(View.GONE);
+        } else {
+//            Log.d("img from pref", sharedPref.getString("img", ""));
+            img.setText(sharedPref.getString("img", ""));
+//            img.setText();
+        }
 
         if(!nazwaFromPreferences.equals("") && !adresFromPreferences.equals("")){
             name.setText(nazwaFromPreferences);
@@ -65,8 +74,9 @@ public class ProfileEditFragment extends Fragment {
             public void onClick(View v) {
                 String nameText = name.getText().toString();
                 String addressText = address.getText().toString();
+                String imgText = img.getText().toString();
 
-                if(nameText.equals(nazwaFromPreferences) && addressText.equals(adresFromPreferences)){
+                if(nameText.equals(nazwaFromPreferences) && addressText.equals(adresFromPreferences) && imgText.length() == 0){
 
                     //Text didn't change, don't allow the update
                     //Maybe should a warning message
@@ -83,6 +93,10 @@ public class ProfileEditFragment extends Fragment {
                         params.put("nazwa", nameText);
                         params.put("adres", addressText);
 
+                        if(img.length() != 0){
+                            params.put("img", imgText);
+                        }
+
                         JSONObject parameters = new JSONObject(params);
 
                         JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, parameters, new Response.Listener<JSONObject>() {
@@ -90,10 +104,14 @@ public class ProfileEditFragment extends Fragment {
                             public void onResponse(JSONObject response) {
                                 //Update SharedPreferences
                                 SharedPreferences.Editor editor = sharedPref.edit();
-
+                                Log.d("xd?", response.toString());
                                 try {
                                     editor.putString(getString(R.string.nazwa), response.getString("nazwa"));
                                     editor.putString("adres", response.getString("adres"));
+
+                                    if(response.getString("img").length() != 0){
+                                        editor.putString("img", response.getString("img"));
+                                    }
 
                                     //Update username in toolbar - it doesn't change automatically
                                     TextView toolbarUsername = getActivity().findViewById(R.id.toolbarUsername);

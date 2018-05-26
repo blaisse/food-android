@@ -129,6 +129,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.drawer_restaurant_list:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new RestaurantListFragment()).addToBackStack(null).commit();
                 break;
+            case R.id.drawer_restaurant_fragment:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new RestaurantFragment()).addToBackStack(null).commit();
+                break;
             case R.id.drawer_orders:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new OrderFragment()).addToBackStack(null).commit();
                 break;
@@ -147,6 +150,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 SharedPreferences.Editor editor = sharedPref.edit();
                 editor.remove(getString(R.string.token));
                 editor.remove(getString(R.string.nazwa));
+                editor.remove("img");
                 editor.commit();//or apply()?
 
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();

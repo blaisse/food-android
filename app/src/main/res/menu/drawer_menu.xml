@@ -25,6 +25,11 @@
             android:icon="@drawable/ic_person_add_black_24dp"
             android:title="Rejestracja" />
 
+        <item
+            android:id="@+id/drawer_restaurant_fragment"
+            android:icon="@drawable/ic_person_add_black_24dp"
+            android:title="Restauracja TEST" />
+
     </group>
 
 

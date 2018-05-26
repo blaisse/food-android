@@ -103,6 +103,10 @@ public class LoginFragment extends Fragment {
                             editor.putString("adres", adres);
                             editor.putString("type", type);
 
+                            if(response.getString("img").length() != 0){
+                                editor.putString("img", response.getString("img"));
+                            }
+
                             editor.commit();
 
                         } catch(JSONException e){

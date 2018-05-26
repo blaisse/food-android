@@ -120,6 +120,10 @@ public class RegisterFragment extends Fragment {
                             editor.putString("adres", adres);
                             editor.putString("type", type);
 
+                            if(response.getString("img").length() != 0){
+                                editor.putString("img", response.getString("img"));
+                            }
+
                             editor.commit();
 
                             //get saved token - testing

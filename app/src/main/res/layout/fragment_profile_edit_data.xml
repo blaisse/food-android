@@ -36,13 +36,22 @@
         android:inputType="textPersonName"
         android:text="Address" />
 
+    <EditText
+        android:id="@+id/profile_edit_data_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
     <Button
         android:id="@+id/profile_edit_data_button"
         android:layout_width="128dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="207dp"
+        android:layout_marginBottom="153dp"
         android:background="@color/colorAccent"
         android:text="Edytuj"
         android:textColor="@color/buttonColor" />
