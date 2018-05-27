@@ -33,10 +33,10 @@
         android:id="@+id/editRegisterUser"
         android:layout_width="288dp"
         android:layout_height="44dp"
+
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-
-        android:layout_marginTop="137dp"
+        android:layout_marginTop="112dp"
         android:ems="10"
         android:hint="Nazwa użytkownika"
         android:inputType="textPersonName" />
@@ -45,9 +45,7 @@
         android:id="@+id/editRegisterPassword"
         android:layout_width="288dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="199dp"
+        android:layout_centerInParent="true"
         android:ems="10"
         android:hint="Hasło"
         android:inputType="textPassword" />
@@ -58,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="128dp"
+        android:layout_marginBottom="55dp"
         android:background="@color/colorAccent"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
@@ -71,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="63dp"
+        android:layout_marginBottom="16dp"
         android:text="Przejdź do strony logowania" />
 
     <EditText
@@ -80,9 +78,35 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="201dp"
+        android:layout_marginTop="169dp"
         android:ems="10"
         android:hint="Adres"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/editRegisterX"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="174dp"
+        android:ems="10"
+        android:hint="X"
+        android:visibility="gone"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/editRegisterY"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="117dp"
+        android:ems="10"
+        android:hint="Y"
+        android:visibility="gone"
         android:inputType="textPersonName"
         android:text="" />
 

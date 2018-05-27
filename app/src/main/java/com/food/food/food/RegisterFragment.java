@@ -48,9 +48,13 @@ public class RegisterFragment extends Fragment {
 
         Queue = Volley.newRequestQueue(getActivity().getApplicationContext());
 
+//
+
         final EditText registerUser = v.findViewById(R.id.editRegisterUser);
         final EditText registerPassword = v.findViewById(R.id.editRegisterPassword);
         final EditText registerAddress = v.findViewById(R.id.editRegisterAddress);
+        final EditText registerX = v.findViewById(R.id.editRegisterX);
+        final EditText registerY = v.findViewById(R.id.editRegisterY);
 
         final TextView linkToLogin = v.findViewById(R.id.linkToLogin);
 
@@ -63,6 +67,13 @@ public class RegisterFragment extends Fragment {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton btn = radioGroup.findViewById(checkedId);
+                if(btn.getText().toString().equals("Restauracja")){
+                    registerX.setVisibility(View.VISIBLE);
+                    registerY.setVisibility(View.VISIBLE);
+                } else {
+                    registerX.setVisibility(View.GONE);
+                    registerY.setVisibility(View.GONE);
+                }
 //                int i = radioGroup.indexOfChild(btn);
                 Log.d("Button selected", btn.getText().toString());
             }
@@ -79,12 +90,15 @@ public class RegisterFragment extends Fragment {
                 radioButton = v.findViewById(id);
 
                 final String type;
+                String x = "";
+                String y = "";
 
                 if(radioButton.getText().equals("Użytkownik")){
-                    Log.d("WORK", "IT BE WORK USER");
                     type = "user";
                 } else {
                     type = "restaurant";
+                    x = registerX.getText().toString();
+                    y = registerY.getText().toString();
                 }
 
                 String url = "https://food--api.herokuapp.com/signupRestaurant";
@@ -97,6 +111,11 @@ public class RegisterFragment extends Fragment {
                 params.put("adres", address);
                 params.put("password", password);
                 params.put("type", type);
+
+                if(!radioButton.getText().equals("Użytkownik")){
+                    params.put("x", x);
+                    params.put("y", y);
+                }
 
                 Log.d("MAPA", params.toString());
 
